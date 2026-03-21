@@ -66,7 +66,7 @@ export default function Contact() {
         Open to internships, full-time roles, and freelance projects. My inbox is always open.
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 36, alignItems: 'start' }}>
+      <div className="contact-grid-main" style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 36, alignItems: 'start' }}>
 
         {/* ── LINKS ── */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -139,7 +139,7 @@ export default function Contact() {
           </div>
 
           {/* Name + Email row */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
+          <div className="contact-grid-inputs" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 14 }}>
             {[
               { key: 'name',  label: 'Name',  placeholder: 'Your name',       type: 'text'  },
               { key: 'email', label: 'Email', placeholder: 'your@email.com',  type: 'email' },

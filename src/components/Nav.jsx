@@ -50,7 +50,7 @@ export default function Nav() {
         </div>
 
         {/* Desktop links */}
-        <div style={{ display: 'flex', gap: 3 }}>
+        <div className="nav-desktop-links" style={{ display: 'flex', gap: 3 }}>
           {NAV_ITEMS.map(n => (
             <button
               key={n}
@@ -85,6 +85,7 @@ export default function Nav() {
             ↓ Resume
           </a>
           <button
+            className="nav-hamburger"
             onClick={() => setOpen(!open)}
             style={{ background: 'none', border: 'none', color: '#F0F0FA', fontSize: 20, cursor: 'pointer', lineHeight: 1 }}
           >

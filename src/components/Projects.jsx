@@ -29,7 +29,7 @@ function ProjectCard({ proj, index }) {
         e.currentTarget.style.boxShadow = 'none'
       }}
     >
-      <div style={{ display: 'grid', gridTemplateColumns: (proj.isLive || proj.img) ? '1fr 1fr' : '1fr' }}>
+      <div className={(proj.isLive || proj.img) ? 'project-grid-2' : 'project-grid-1'}>
 
         {/* Screenshot */}
         {(proj.isLive || proj.img) && (
@@ -77,7 +77,7 @@ function ProjectCard({ proj, index }) {
         )}
 
         {/* Info panel */}
-        <div style={{
+        <div className="project-info-panel" style={{
           padding: (proj.isLive || proj.img) ? '40px 36px' : '42px 44px',
           borderLeft: (proj.isLive || proj.img) ? '1.5px solid rgba(255,255,255,0.07)' : 'none',
           borderTop: !(proj.isLive || proj.img) ? `3px solid ${proj.color}` : 'none',

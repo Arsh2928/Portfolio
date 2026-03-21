@@ -16,7 +16,7 @@ const STATS = [
 export default function Hero() {
   return (
     <section id="home" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '80px 32px 60px', maxWidth: 1180, margin: '0 auto' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 64, alignItems: 'center', width: '100%' }}>
+      <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 64, alignItems: 'center', width: '100%' }}>
 
         {/* ── LEFT ── */}
         <div>
@@ -38,7 +38,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Roles */}
-          <motion.div {...fadeUp(0.36)} style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 22, flexWrap: 'wrap' }}>
+          <motion.div {...fadeUp(0.36)} className="hero-roles" style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 22, flexWrap: 'wrap' }}>
             {['Full Stack Developer', 'DSA Enthusiast', 'B.Tech CSE @ LPU'].map((r, i) => (
               <span key={r} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                 <span style={{ fontSize: 16, fontWeight: 600, color: '#6B7280' }}>{r}</span>
@@ -53,7 +53,7 @@ export default function Hero() {
           </motion.p>
 
           {/* CTA */}
-          <motion.div {...fadeUp(0.6)} style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 46 }}>
+          <motion.div {...fadeUp(0.6)} className="hero-cta" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 46 }}>
             <button
               className="btn-primary"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -65,7 +65,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Stats */}
-          <motion.div {...fadeUp(0.74)} style={{ display: 'flex', gap: 40, flexWrap: 'wrap' }}>
+          <motion.div {...fadeUp(0.74)} className="hero-stats" style={{ display: 'flex', gap: 40, flexWrap: 'wrap' }}>
             {STATS.map(s => (
               <div key={s.l}>
                 <div style={{ fontSize: 28, fontWeight: 900, color: '#6366F1', lineHeight: 1 }}>{s.n}</div>
