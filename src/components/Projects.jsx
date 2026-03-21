@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { PROJECTS } from '../data'
+import { getIcon } from '../icons'
 
 function ProjectCard({ proj, index }) {
   const ref = useRef(null)
@@ -110,10 +111,11 @@ function ProjectCard({ proj, index }) {
             {proj.tech.map(t => (
               <span key={t} style={{
                 fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 600,
-                padding: '3px 9px', borderRadius: 4,
+                padding: '4px 10px', borderRadius: 4,
                 background: `${proj.color}10`, border: `1.5px solid ${proj.color}28`, color: proj.color,
+                display: 'flex', alignItems: 'center', gap: 6
               }}>
-                {t}
+                <span style={{ display: 'flex', opacity: 0.85, transform: 'scale(0.95)' }}>{getIcon(t)}</span> {t}
               </span>
             ))}
           </div>

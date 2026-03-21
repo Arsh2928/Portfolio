@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { getIcon } from '../icons'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -119,10 +120,11 @@ export default function Hero() {
                 fontSize: 10.5, fontWeight: 700,
                 padding: '5px 11px', borderRadius: 6,
                 background: '#0A1120', whiteSpace: 'nowrap',
+                display: 'flex', alignItems: 'center', gap: 6,
                 ...b.style,
               }}
             >
-              {b.label}
+              <div style={{ display: 'flex', transform: 'scale(0.95)' }}>{getIcon(b.label)}</div> {b.label}
             </div>
           ))}
         </motion.div>

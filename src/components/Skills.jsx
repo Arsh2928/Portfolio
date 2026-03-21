@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { SKILLS } from '../data'
+import { getIcon } from '../icons'
 
 function SkillCard({ item, index }) {
   const ref = useRef(null)
@@ -17,12 +18,24 @@ function SkillCard({ item, index }) {
         ['--pct']: `${item.pct}%`,
         ['--fill-scale']: `${item.pct / 100}`,
         ['--float-delay']: `${(index % 10) * 0.35}s`,
+        ['--brand-color']: item.borderColor.replace('0.25)', '1)'),
+        ['--brand-glow']: item.borderColor.replace('0.25)', '0.35)'),
       }}
     >
       <div className="skill-card__fill" aria-hidden="true" />
 
       <div className="skill-card__content">
-        <div className="skill-card__name">{item.name}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, position: 'relative', zIndex: 10 }}>
+          <div className="skill-logo-box" style={{
+            width: 38, height: 38, borderRadius: 10,
+            background: item.bg, border: `1px solid ${item.borderColor}`,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            color: item.borderColor.replace('0.25)', '0.9)')
+          }}>
+            <div style={{ transform: 'scale(1.2)', display: 'flex' }}>{getIcon(item.name)}</div>
+          </div>
+          <div className="skill-card__name">{item.name}</div>
+        </div>
         <div className="skill-card__pct">{item.pct}%</div>
       </div>
     </motion.div>
