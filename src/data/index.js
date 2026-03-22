@@ -84,6 +84,18 @@ export const PROJECTS = [
 
 export const CERTIFICATIONS = [
   {
+    title: 'Cloud Computing (Elite)',
+    issuer: 'NPTEL Online Certification',
+    date: 'Apr 2025',
+    url: 'https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs11/Course/NPTEL25CS11S133730108704230447.pdf',
+    img: '/cert-nptel-cloud.png',
+    emoji: '☁️',
+    bgColor: '#1A0B0B',
+    accent: '#EF4444',
+    accentText: '#FFF',
+  },
+
+  {
     title: 'Responsive Web Design',
     issuer: 'freeCodeCamp',
     date: 'Oct 2023',
