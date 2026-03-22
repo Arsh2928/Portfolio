@@ -74,11 +74,11 @@ export const PROJECTS = [
       'Preparedness knowledge base and awareness module',
     ],
     tech: ['HTML5', 'CSS3', 'PHP', 'MySQL', 'JavaScript'],
-    live: null,
+    live: 'https://disaster-management-mu-rouge.vercel.app/',
     github: 'https://github.com/Arsh2928/Disaster-management.git',
     img: '/disaster-management.png',
     color: '#F472B6',
-    isLive: false,
+    isLive: true,
   },
 ];
 
